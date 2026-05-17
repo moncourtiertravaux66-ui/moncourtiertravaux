@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Mon Courtier Travaux — Apporteur d'affaires & Courtier en travaux à Perpignan. Trouvez le bon artisan gratuitement. Peinture, carrelage, plomberie, rénovation. 06 60 37 37 22">
+<title>Mon Courtier Travaux — Perpignan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --noir:      #1A1A1A;
+  --or:        #C9A96E;
+  --or-dark:   #9E7A45;
+  --or-pale:   #E8D5B0;
+  --creme:     #F8F5F0;
+  --gris:      #4A4A4A;
+  --gris-l:    #8A8A8A;
+  --gris-xl:   #D0CDC8;
+  --blanc:     #FFFFFF;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--blanc);
+  color: var(--noir);
+  overflow-x: hidden;
+}
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: var(--noir); }
+::-webkit-scrollbar-thumb { background: var(--or); }
+
+/* ══════════════════════════════
+   NAV
+══════════════════════════════ */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(26,26,26,0.96);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(201,169,110,0.15);
+  padding: 0 24px;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 60px;
+}
+
+.nav-logo {
+  display: flex; align-items: center; gap: 12px;
+}
+.nav-mct {
+  width: 36px; height: 36px;
+  background: var(--noir);
+  border: 1px solid var(--or-dark);
+  display: flex; align-items: center; justify-content: center;
+}
+.nav-mct span {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 14px; font-weight: 600;
+  color: var(--or); letter-spacing: 0.05em;
+}
+.nav-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 15px; font-weight: 600;
+  color: var(--blanc); letter-spacing: 0.04em;
+}
+.nav-name em {
+  display: block; font-style: italic;
+  font-size: 10px; font-weight: 400;
+  color: var(--or); letter-spacing: 0.12em;
+  text-transform: uppercase; margin-top: 1px;
+}
+
+.nav-cta {
+  background: var(--or);
+  color: var(--noir);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px; font-weight: 500;
+  padding: 8px 18px;
+  border: none; cursor: pointer;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.nav-cta:hover { background: var(--or-dark); color: var(--blanc); }
+
+/* ══════════════════════════════
+   HERO
+══════════════════════════════ */
+.hero {
+  min-height: 100vh;
+  background: var(--noir);
+  display: flex; flex-direction: column;
+  justify-content: center;
+  padding: 100px 24px 60px;
+  position: relative; overflow: hidden;
+}
+
+/* Texture grain */
+.hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none; opacity: 0.4;
+}
+
+/* Grande lettre décorative */
+.hero-deco {
+  position: absolute;
+  right: -40px; top: 50%;
+  transform: translateY(-50%);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(200px, 35vw, 420px);
+  font-weight: 700; color: rgba(201,169,110,0.04);
+  line-height: 1; pointer-events: none;
+  user-select: none;
+}
+
+/* Trait vertical or gauche */
+.hero-line {
+  position: absolute; left: 0; top: 0; bottom: 0;
+  width: 3px; background: var(--or);
+}
+
+.hero-content { position: relative; z-index: 1; max-width: 680px; }
+
+.hero-label {
+  font-size: 10px; font-weight: 500;
+  color: var(--or); letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  display: flex; align-items: center; gap: 12px;
+}
+.hero-label::before {
+  content: '';
+  width: 28px; height: 1px; background: var(--or);
+}
+
+.hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(42px, 8vw, 82px);
+  font-weight: 600; line-height: 1.05;
+  color: var(--blanc);
+  margin-bottom: 8px;
+}
+.hero-title em {
+  font-style: italic; color: var(--or);
+  display: block;
+}
+
+.hero-sep {
+  width: 60px; height: 1px;
+  background: var(--or);
+  margin: 28px 0;
+}
+
+.hero-tagline {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(18px, 3vw, 24px);
+  font-style: italic; font-weight: 400;
+  color: var(--gris-l);
+  margin-bottom: 40px;
+  line-height: 1.5;
+}
+
+.hero-actions {
+  display: flex; gap: 14px; flex-wrap: wrap;
+}
+
+.btn-primary {
+  background: var(--or);
+  color: var(--noir);
+  font-size: 13px; font-weight: 500;
+  padding: 14px 28px;
+  border: none; cursor: pointer;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.2s;
+  display: inline-block;
+}
+.btn-primary:hover { background: var(--or-dark); color: var(--blanc); }
+
+.btn-secondary {
+  background: transparent;
+  color: var(--blanc);
+  font-size: 13px; font-weight: 400;
+  padding: 14px 28px;
+  border: 1px solid rgba(255,255,255,0.2);
+  cursor: pointer;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.2s;
+  display: inline-block;
+}
+.btn-secondary:hover { border-color: var(--or); color: var(--or); }
+
+.hero-bottom {
+  position: absolute; bottom: 36px; left: 24px; right: 24px;
+  display: flex; justify-content: space-between; align-items: flex-end;
+  z-index: 1;
+}
+.hero-phone {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px; font-weight: 600;
+  color: var(--or); letter-spacing: 0.04em;
+  text-decoration: none;
+}
+.hero-phone:hover { color: var(--or-pale); }
+.hero-phone-label {
+  font-size: 9px; letter-spacing: 0.15em;
+  text-transform: uppercase; color: var(--gris-l);
+  margin-bottom: 4px;
+}
+.hero-zone {
+  font-size: 11px; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--gris-l);
+  text-align: right;
+}
+
+/* ══════════════════════════════
+   SECTION GÉNÉRIQUE
+══════════════════════════════ */
+section { padding: 80px 24px; }
+
+.section-inner { max-width: 900px; margin: 0 auto; }
+
+.section-label {
+  font-size: 9px; font-weight: 500;
+  color: var(--or); letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  display: flex; align-items: center; gap: 10px;
+}
+.section-label::before {
+  content: ''; width: 20px; height: 1px; background: var(--or);
+}
+
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(30px, 5vw, 46px);
+  font-weight: 600; line-height: 1.1;
+  margin-bottom: 16px;
+}
+
+.section-sep {
+  width: 40px; height: 1px;
+  background: var(--or); margin-bottom: 40px;
+}
+
+/* ══════════════════════════════
+   POURQUOI — fond crème
+══════════════════════════════ */
+.why { background: var(--creme); }
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2px; margin-top: 40px;
+}
+
+.why-card {
+  background: var(--blanc);
+  padding: 32px 28px;
+  position: relative;
+  border-left: 2px solid transparent;
+  transition: border-color 0.3s;
+}
+.why-card:hover { border-left-color: var(--or); }
+
+.why-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 48px; font-weight: 700;
+  color: rgba(201,169,110,0.15);
+  line-height: 1; margin-bottom: 16px;
+}
+.why-card-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px; font-weight: 600;
+  margin-bottom: 10px;
+}
+.why-card-text {
+  font-size: 14px; line-height: 1.65;
+  color: var(--gris); font-weight: 300;
+}
+.why-gratuit {
+  background: var(--noir);
+}
+.why-gratuit .why-num { color: rgba(201,169,110,0.2); }
+.why-gratuit .why-card-title { color: var(--or); }
+.why-gratuit .why-card-text { color: var(--gris-l); }
+
+/* ══════════════════════════════
+   PROCESS — fond noir
+══════════════════════════════ */
+.process { background: var(--noir); }
+.process .section-title { color: var(--blanc); }
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0; margin-top: 50px;
+  position: relative;
+}
+
+/* Ligne connecteur */
+.steps::before {
+  content: '';
+  position: absolute; top: 24px; left: 10%; right: 10%;
+  height: 1px; background: rgba(201,169,110,0.2);
+}
+
+.step { text-align: center; padding: 0 16px; position: relative; }
+
+.step-num {
+  width: 48px; height: 48px;
+  border: 1px solid var(--or);
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 20px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px; font-weight: 600; color: var(--or);
+  background: var(--noir);
+  position: relative; z-index: 1;
+}
+.step-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 17px; font-weight: 600;
+  color: var(--blanc); margin-bottom: 10px;
+}
+.step-text {
+  font-size: 12px; line-height: 1.6;
+  color: var(--gris-l); font-weight: 300;
+}
+
+/* ══════════════════════════════
+   TRAVAUX — fond blanc
+══════════════════════════════ */
+.travaux { background: var(--blanc); }
+
+.travaux-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 2px; margin-top: 40px;
+}
+
+.travaux-item {
+  padding: 22px 16px;
+  background: var(--creme);
+  text-align: center;
+  cursor: default;
+  transition: background 0.2s;
+  border-bottom: 2px solid transparent;
+}
+.travaux-item:hover {
+  background: var(--noir);
+  border-bottom-color: var(--or);
+}
+.travaux-icon { font-size: 22px; margin-bottom: 8px; display: block; }
+.travaux-name {
+  font-size: 12px; font-weight: 500;
+  letter-spacing: 0.04em; color: var(--gris);
+}
+.travaux-item:hover .travaux-name { color: var(--or); }
+
+/* ══════════════════════════════
+   ZONE — fond crème
+══════════════════════════════ */
+.zone { background: var(--creme); }
+
+.zone-content {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 60px; align-items: center;
+  margin-top: 40px;
+}
+@media (max-width: 640px) { .zone-content { grid-template-columns: 1fr; gap: 30px; } }
+
+.zone-text { font-size: 15px; line-height: 1.75; color: var(--gris); font-weight: 300; }
+.zone-text strong { font-weight: 500; color: var(--noir); }
+
+.zone-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 24px; }
+.zone-tag {
+  padding: 6px 14px;
+  background: var(--blanc);
+  font-size: 11px; font-weight: 500;
+  color: var(--gris); letter-spacing: 0.06em;
+  border-bottom: 1px solid var(--or);
+}
+
+.zone-block {
+  background: var(--noir);
+  padding: 40px 36px;
+}
+.zone-block-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px; font-weight: 600;
+  color: var(--or); margin-bottom: 16px;
+}
+.zone-block-text {
+  font-size: 14px; line-height: 1.7;
+  color: var(--gris-l); font-weight: 300;
+  margin-bottom: 28px;
+}
+.zone-block-phone {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 26px; color: var(--blanc);
+  font-weight: 600; text-decoration: none;
+  display: block; margin-bottom: 6px;
+}
+.zone-block-phone:hover { color: var(--or); }
+.zone-block-sub {
+  font-size: 10px; letter-spacing: 0.15em;
+  text-transform: uppercase; color: var(--gris-l);
+}
+
+/* ══════════════════════════════
+   CONTACT — fond noir
+══════════════════════════════ */
+.contact { background: var(--noir); }
+.contact .section-title { color: var(--blanc); }
+
+.contact-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 60px; margin-top: 50px;
+}
+@media (max-width: 640px) { .contact-grid { grid-template-columns: 1fr; gap: 36px; } }
+
+.contact-info { display: flex; flex-direction: column; gap: 28px; }
+
+.contact-item-label {
+  font-size: 9px; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--or);
+  margin-bottom: 6px;
+}
+.contact-item-value {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px; color: var(--blanc);
+  text-decoration: none; font-weight: 600;
+}
+.contact-item-value:hover { color: var(--or); }
+.contact-item-sub {
+  font-size: 12px; color: var(--gris-l);
+  margin-top: 3px; font-weight: 300;
+}
+
+/* Formulaire */
+.form { display: flex; flex-direction: column; gap: 16px; }
+
+.form-group { display: flex; flex-direction: column; gap: 6px; }
+.form-label {
+  font-size: 9px; letter-spacing: 0.15em;
+  text-transform: uppercase; color: var(--gris-l);
+}
+.form-input, .form-textarea, .form-select {
+  background: rgba(255,255,255,0.04);
+  border: none; border-bottom: 1px solid rgba(255,255,255,0.15);
+  padding: 10px 0;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px; color: var(--blanc);
+  width: 100%; outline: none;
+  transition: border-color 0.2s;
+  -webkit-appearance: none; appearance: none;
+}
+.form-input:focus, .form-textarea:focus, .form-select:focus {
+  border-bottom-color: var(--or);
+}
+.form-input::placeholder, .form-textarea::placeholder { color: var(--gris-l); }
+.form-textarea { resize: none; height: 80px; }
+.form-select { color: var(--gris-l); cursor: pointer; }
+.form-select option { background: var(--noir); color: var(--blanc); }
+
+.form-submit {
+  background: var(--or);
+  color: var(--noir);
+  border: none; padding: 14px 28px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 12px; font-weight: 500;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  cursor: pointer; margin-top: 8px;
+  transition: all 0.2s; width: 100%;
+}
+.form-submit:hover { background: var(--or-dark); color: var(--blanc); }
+
+.form-success {
+  display: none;
+  padding: 16px;
+  background: rgba(201,169,110,0.1);
+  border-left: 2px solid var(--or);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px; font-style: italic;
+  color: var(--or);
+}
+
+/* ══════════════════════════════
+   FOOTER
+══════════════════════════════ */
+footer {
+  background: #111111;
+  padding: 24px;
+  display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: 12px;
+  border-top: 1px solid rgba(201,169,110,0.1);
+}
+.footer-left {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 13px; color: var(--gris-l);
+}
+.footer-left strong { color: var(--or); font-weight: 600; }
+.footer-right {
+  font-size: 10px; letter-spacing: 0.1em;
+  text-transform: uppercase; color: rgba(255,255,255,0.2);
+}
+
+/* ══════════════════════════════
+   ANIMATIONS
+══════════════════════════════ */
+.fade-up {
+  opacity: 0; transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.fade-up.visible { opacity: 1; transform: translateY(0); }
+
+/* ══════════════════════════════
+   MOBILE
+══════════════════════════════ */
+@media (max-width: 600px) {
+  nav { padding: 0 16px; }
+  .hero { padding: 80px 20px 100px; }
+  .hero-bottom { flex-direction: column; align-items: flex-start; gap: 12px; }
+  section { padding: 60px 20px; }
+  .steps::before { display: none; }
+  .steps { gap: 32px; }
+  footer { flex-direction: column; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    <div class="nav-mct"><span>MCT</span></div>
+    <div class="nav-name">
+      Mon Courtier Travaux
+      <em>Perpignan & alentours</em>
+    </div>
+  </div>
+  <a href="#contact" class="nav-cta">Nous contacter</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="accueil">
+  <div class="hero-line"></div>
+  <div class="hero-deco">M</div>
+  <div class="hero-content">
+    <div class="hero-label">Apporteur d'affaires & Courtier en travaux</div>
+    <h1 class="hero-title">
+      L'artisan qu'il vous faut,
+      <em>trouvé pour vous.</em>
+    </h1>
+    <div class="hero-sep"></div>
+    <p class="hero-tagline">
+      Vous avez un projet de travaux à Perpignan ?<br>
+      Je sélectionne le bon artisan — gratuitement.
+    </p>
+    <div class="hero-actions">
+      <a href="tel:0660373722" class="btn-primary">Appeler maintenant</a>
+      <a href="#process" class="btn-secondary">Comment ça marche</a>
+    </div>
+  </div>
+  <div class="hero-bottom">
+    <div>
+      <div class="hero-phone-label">Appel gratuit</div>
+      <a href="tel:0660373722" class="hero-phone">06 60 37 37 22</a>
+    </div>
+    <div class="hero-zone">Perpignan · 66 · Alentours</div>
+  </div>
+</section>
+
+<!-- POURQUOI -->
+<section class="why" id="pourquoi">
+  <div class="section-inner">
+    <div class="section-label">Pourquoi nous choisir</div>
+    <h2 class="section-title">Un service conçu<br>pour vous simplifier la vie</h2>
+    <div class="section-sep"></div>
+    <div class="why-grid">
+      <div class="why-card fade-up">
+        <div class="why-num">01</div>
+        <div class="why-card-title">Gain de temps</div>
+        <p class="why-card-text">Fini les heures à chercher un artisan disponible et fiable. Je m'en occupe pour vous dès le premier appel.</p>
+      </div>
+      <div class="why-card fade-up">
+        <div class="why-num">02</div>
+        <div class="why-card-title">Artisans vérifiés</div>
+        <p class="why-card-text">Je travaille uniquement avec des professionnels assurés, recommandés et sélectionnés pour leur sérieux.</p>
+      </div>
+      <div class="why-card fade-up">
+        <div class="why-num">03</div>
+        <div class="why-card-title">Visite sur place</div>
+        <p class="why-card-text">Je me déplace chez vous pour évaluer votre projet et vous transmettre une fiche complète à l'artisan.</p>
+      </div>
+      <div class="why-card why-gratuit fade-up">
+        <div class="why-num">00 €</div>
+        <div class="why-card-title">Gratuit pour vous</div>
+        <p class="why-card-text">Ma commission est intégralement prise en charge par l'artisan partenaire. Vous ne payez rien de plus.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process" id="process">
+  <div class="section-inner">
+    <div class="section-label" style="color:var(--or)">Comment ça marche</div>
+    <h2 class="section-title">4 étapes,<br>zéro complication</h2>
+    <div class="section-sep"></div>
+    <div class="steps">
+      <div class="step fade-up">
+        <div class="step-num">1</div>
+        <div class="step-title">Vous appelez</div>
+        <p class="step-text">Décrivez votre projet en quelques minutes. Premier échange gratuit et sans engagement.</p>
+      </div>
+      <div class="step fade-up">
+        <div class="step-num">2</div>
+        <div class="step-title">Visite chantier</div>
+        <p class="step-text">Je me déplace chez vous en soirée pour constater les travaux et établir une fiche complète.</p>
+      </div>
+      <div class="step fade-up">
+        <div class="step-num">3</div>
+        <div class="step-title">Je sélectionne</div>
+        <p class="step-text">Je choisis l'artisan le plus adapté à votre projet parmi mon réseau de partenaires vérifiés.</p>
+      </div>
+      <div class="step fade-up">
+        <div class="step-num">4</div>
+        <div class="step-title">Devis & travaux</div>
+        <p class="step-text">L'artisan vous contacte sous 48h pour convenir d'une visite et vous remettre un devis.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRAVAUX -->
+<section class="travaux" id="travaux">
+  <div class="section-inner">
+    <div class="section-label">Nos domaines</div>
+    <h2 class="section-title">Tous corps de métier<br>du bâtiment</h2>
+    <div class="section-sep"></div>
+    <div class="travaux-grid">
+      <div class="travaux-item fade-up"><span class="travaux-icon">🎨</span><div class="travaux-name">Peinture</div></div>
+      <div class="travaux-item fade-up"><span class="travaux-icon">🟫</span><div class="travaux-name">Carrelage</div></div>
+      <div class="travaux-item fade-up"><span class="travaux-icon">🔧</span><div class="travaux-name">Plomberie</div></div>
+      <div class="travaux-item fade-up"><span class="travaux-icon">⚡</span><div class="travaux-name">Électricité</div></div>
+      <div class="travaux-item fade-up"><span class="travaux-icon">🚪</span><div class="travaux-name">Menuiserie</div></div>
+      <div class="travaux-item fade-up"><span class="travaux-icon">🧱</span><div class="travaux-name">Isolation</div></div>
+      <div class="travaux-item fade-up"><span class="travaux-icon">🏗️</span><div class="travaux-name">Placo</div></div>
+      <div class="travaux-item fade-up"><span class="travaux-icon">🪵</span><div class="travaux-name">Sol</div></div>
+      <div class="travaux-item fade-up"><span class="travaux-icon">🚿</span><div class="travaux-name">Salle de bain</div></div>
+      <div class="travaux-item fade-up"><span class="travaux-icon">🍳</span><div class="travaux-name">Cuisine</div></div>
+      <div class="travaux-item fade-up"><span class="travaux-icon">🏠</span><div class="travaux-name">Toiture</div></div>
+      <div class="travaux-item fade-up"><span class="travaux-icon">🔨</span><div class="travaux-name">Rénovation</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ZONE -->
+<section class="zone" id="zone">
+  <div class="section-inner">
+    <div class="section-label">Zone d'intervention</div>
+    <h2 class="section-title">Perpignan<br>& alentours</h2>
+    <div class="section-sep"></div>
+    <div class="zone-content">
+      <div>
+        <p class="zone-text">
+          J'interviens sur <strong>Perpignan et l'ensemble du département des Pyrénées-Orientales</strong>. Que vous soyez propriétaire occupant ou bailleur, je me déplace pour évaluer votre projet et vous mettre en relation avec le bon artisan.
+        </p>
+        <p class="zone-text" style="margin-top:16px;">
+          Visites chantier réalisées <strong>en soirée à partir de 18h</strong>, sur rendez-vous. Disponible par téléphone en journée.
+        </p>
+        <div class="zone-tags">
+          <span class="zone-tag">Perpignan</span>
+          <span class="zone-tag">Cabestany</span>
+          <span class="zone-tag">Saint-Estève</span>
+          <span class="zone-tag">Canet-en-Roussillon</span>
+          <span class="zone-tag">Rivesaltes</span>
+          <span class="zone-tag">Le Barcarès</span>
+          <span class="zone-tag">Département 66</span>
+        </div>
+      </div>
+      <div class="zone-block fade-up">
+        <div class="zone-block-title">Prêt à démarrer ?</div>
+        <p class="zone-block-text">
+          Premier contact gratuit et sans engagement. Décrivez-moi votre projet en quelques mots — je reviens vers vous rapidement.
+        </p>
+        <a href="tel:0660373722" class="zone-block-phone">06 60 37 37 22</a>
+        <div class="zone-block-sub">Appel gratuit · Devis sans engagement</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="section-inner">
+    <div class="section-label" style="color:var(--or)">Contact</div>
+    <h2 class="section-title">Parlons de<br>votre projet</h2>
+    <div class="section-sep"></div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div>
+          <div class="contact-item-label">Téléphone</div>
+          <a href="tel:0660373722" class="contact-item-value">06 60 37 37 22</a>
+          <div class="contact-item-sub">Appel gratuit, disponible en journée</div>
+        </div>
+        <div>
+          <div class="contact-item-label">Email</div>
+          <a href="mailto:moncourtiertravaux66@gmail.com" class="contact-item-value" style="font-size:16px">moncourtiertravaux66@gmail.com</a>
+        </div>
+        <div>
+          <div class="contact-item-label">Zone</div>
+          <div class="contact-item-value" style="font-size:18px">Perpignan & alentours</div>
+          <div class="contact-item-sub">Visites en soirée à partir de 18h</div>
+        </div>
+        <div>
+          <div class="contact-item-label">Interlocuteur</div>
+          <div class="contact-item-value" style="font-size:18px">Joan Marchand</div>
+          <div class="contact-item-sub">Apporteur d'affaires & Courtier en travaux</div>
+        </div>
+      </div>
+      <div>
+        <form class="form" id="contactForm">
+          <div class="form-group">
+            <label class="form-label">Votre nom *</label>
+            <input type="text" class="form-input" id="fNom" placeholder="Jean Dupont" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Téléphone *</label>
+            <input type="tel" class="form-input" id="fTel" placeholder="06 XX XX XX XX" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Type de travaux</label>
+            <select class="form-select" id="fTravaux">
+              <option value="">— Sélectionner —</option>
+              <option>Peinture</option><option>Carrelage</option>
+              <option>Plomberie</option><option>Électricité</option>
+              <option>Menuiserie</option><option>Isolation</option>
+              <option>Rénovation complète</option><option>Autre</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Votre message</label>
+            <textarea class="form-textarea" id="fMsg" placeholder="Décrivez brièvement votre projet..."></textarea>
+          </div>
+          <button type="submit" class="form-submit">Envoyer ma demande</button>
+          <div class="form-success" id="formSuccess">
+            Merci — je vous recontacte dans les plus brefs délais.
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-left">
+    <strong>Mon Courtier Travaux</strong> · Joan Marchand · Perpignan (66)
+  </div>
+  <div class="footer-right">Apporteur d'affaires & Courtier en travaux</div>
+</footer>
+
+<script>
+(function() {
+
+  // ── Scroll animations ──
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.fade-up').forEach(function(el, i) {
+    el.style.transitionDelay = (i % 4) * 0.08 + 's';
+    observer.observe(el);
+  });
+
+  // ── Formulaire ──
+  var form = document.getElementById('contactForm');
+  if (form) {
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var nom    = document.getElementById('fNom').value.trim();
+      var tel    = document.getElementById('fTel').value.trim();
+      if (!nom || !tel) return;
+      var success = document.getElementById('formSuccess');
+      form.querySelector('.form-submit').style.display = 'none';
+      success.style.display = 'block';
+      // Reset après 4s
+      setTimeout(function() {
+        form.reset();
+        form.querySelector('.form-submit').style.display = 'block';
+        success.style.display = 'none';
+      }, 4000);
+    });
+  }
+
+  // ── Nav active sur scroll ──
+  var navCta = document.querySelector('.nav-cta');
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 80) {
+      navCta.style.opacity = '1';
+    }
+  });
+
+})();
+</script>
+</body>
+</html>
