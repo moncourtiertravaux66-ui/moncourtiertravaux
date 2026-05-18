@@ -825,13 +825,13 @@ footer {
         } else {
           btn.disabled = false;
           btn.textContent = 'Envoyer ma demande';
-          alert('Erreur lors de l'envoi. Appelez le 06 60 37 37 22.');
+          alert("Erreur envoi. Appelez le 06 60 37 37 22.");
         }
       })
       .catch(function() {
         btn.disabled = false;
         btn.textContent = 'Envoyer ma demande';
-        alert('Erreur reseau. Appelez le 06 60 37 37 22.');
+        alert("Erreur reseau. Appelez le 06 60 37 37 22.");
       });
     });
   }
