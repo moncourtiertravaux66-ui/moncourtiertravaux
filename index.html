@@ -731,18 +731,21 @@ footer {
         </div>
       </div>
       <div>
-        <form class="form" id="contactForm">
+        <form class="form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="f4340735-8a69-4db3-908d-a1ad12a54d3e">
+          <input type="hidden" name="subject" value="Nouvelle demande — Mon Courtier Travaux">
+          <input type="hidden" name="redirect" value="false">
           <div class="form-group">
             <label class="form-label">Votre nom *</label>
-            <input type="text" class="form-input" id="fNom" placeholder="Jean Dupont" required>
+            <input type="text" name="name" class="form-input" id="fNom" placeholder="Jean Dupont" required>
           </div>
           <div class="form-group">
             <label class="form-label">Téléphone *</label>
-            <input type="tel" class="form-input" id="fTel" placeholder="06 XX XX XX XX" required>
+            <input type="tel" name="telephone" class="form-input" id="fTel" placeholder="06 XX XX XX XX" required>
           </div>
           <div class="form-group">
             <label class="form-label">Type de travaux</label>
-            <select class="form-select" id="fTravaux">
+            <select name="travaux" class="form-select" id="fTravaux">
               <option value="">— Sélectionner —</option>
               <option>Peinture</option><option>Carrelage</option>
               <option>Plomberie</option><option>Électricité</option>
@@ -752,7 +755,7 @@ footer {
           </div>
           <div class="form-group">
             <label class="form-label">Votre message</label>
-            <textarea class="form-textarea" id="fMsg" placeholder="Décrivez brièvement votre projet..."></textarea>
+            <textarea name="message" class="form-textarea" id="fMsg" placeholder="Décrivez brièvement votre projet..."></textarea>
           </div>
           <button type="submit" class="form-submit">Envoyer ma demande</button>
           <div class="form-success" id="formSuccess">
@@ -795,18 +798,41 @@ footer {
   if (form) {
     form.addEventListener('submit', function(e) {
       e.preventDefault();
-      var nom    = document.getElementById('fNom').value.trim();
-      var tel    = document.getElementById('fTel').value.trim();
+      var nom = document.getElementById('fNom').value.trim();
+      var tel = document.getElementById('fTel').value.trim();
       if (!nom || !tel) return;
+      var btn = form.querySelector('.form-submit');
       var success = document.getElementById('formSuccess');
-      form.querySelector('.form-submit').style.display = 'none';
-      success.style.display = 'block';
-      // Reset après 4s
-      setTimeout(function() {
-        form.reset();
-        form.querySelector('.form-submit').style.display = 'block';
-        success.style.display = 'none';
-      }, 4000);
+      btn.disabled = true;
+      btn.textContent = 'Envoi en cours...';
+      var data = new FormData(form);
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: data
+      })
+      .then(function(res) { return res.json(); })
+      .then(function(json) {
+        if (json.success) {
+          btn.style.display = 'none';
+          success.style.display = 'block';
+          setTimeout(function() {
+            form.reset();
+            btn.style.display = 'block';
+            btn.disabled = false;
+            btn.textContent = 'Envoyer ma demande';
+            success.style.display = 'none';
+          }, 4000);
+        } else {
+          btn.disabled = false;
+          btn.textContent = 'Envoyer ma demande';
+          alert('Erreur lors de l'envoi. Appelez le 06 60 37 37 22.');
+        }
+      })
+      .catch(function() {
+        btn.disabled = false;
+        btn.textContent = 'Envoyer ma demande';
+        alert('Erreur reseau. Appelez le 06 60 37 37 22.');
+      });
     });
   }
 
