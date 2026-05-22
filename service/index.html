@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Courtier en travaux à Perpignan — Trouvez le bon artisan pour votre rénovation maison, peinture, carrelage, plomberie dans le 66. Devis gratuit, artisans vérifiés. 06 60 37 37 22">
+<title>Courtier Travaux Perpignan — Rénovation, Peinture, Artisans 66 | Mon Courtier Travaux</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Mon Courtier Travaux",
+  "description": "Apporteur d'affaires et courtier en travaux à Perpignan. Mise en relation gratuite avec des artisans vérifiés pour tous vos projets de rénovation dans le département 66.",
+  "url": "https://moncourtiertravaux66.fr",
+  "telephone": "+33660373722",
+  "email": "moncourtiertravaux66@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Perpignan",
+    "addressRegion": "Occitanie",
+    "postalCode": "66000",
+    "addressCountry": "FR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 42.6887,
+    "longitude": 2.8948
+  },
+  "areaServed": [
+    "Perpignan", "Cabestany", "Saint-Estève", "Canet-en-Roussillon",
+    "Rivesaltes", "Le Barcarès", "Pyrénées-Orientales"
+  ],
+  "serviceType": [
+    "Courtier en travaux", "Apporteur d'affaires bâtiment",
+    "Mise en relation artisans", "Rénovation maison Perpignan"
+  ],
+  "priceRange": "Gratuit pour le client",
+  "openingHours": ["Mo-Sa 09:00-21:00"]
+}
+</script>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --noir: #1A1A1A; --or: #C9A96E; --or-dark: #9E7A45;
+  --creme: #F8F5F0; --gris: #4A4A4A; --gris-l: #8A8A8A;
+  --gris-xl: #D0CDC8; --blanc: #FFFFFF;
+}
+html { scroll-behavior: smooth; }
+body { font-family: 'DM Sans', sans-serif; background: var(--blanc); color: var(--noir); }
+
+/* NAV */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(26,26,26,0.96); backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(201,169,110,0.15);
+  padding: 0 24px; display: flex; align-items: center;
+  justify-content: space-between; height: 76px;
+}
+.nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.nav-hex { display:flex; align-items:center; justify-content:center; }
+.nav-name { font-family: 'Cormorant Garamond', serif; font-size: 16px; font-weight: 600; color: var(--blanc); }
+.nav-name em { display: block; font-style: italic; font-size: 10px; color: var(--or); letter-spacing: 0.1em; text-transform: uppercase; }
+.nav-back {
+  background: transparent; color: var(--or); border: 1px solid var(--or);
+  font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 500;
+  padding: 9px 20px; cursor: pointer; letter-spacing: 0.06em;
+  text-transform: uppercase; text-decoration: none; transition: all 0.2s;
+}
+.nav-back:hover { background: var(--or); color: var(--noir); }
+.nav-cta {
+  background: var(--or); color: var(--noir); border: none;
+  font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 500;
+  padding: 9px 20px; cursor: pointer; letter-spacing: 0.06em;
+  text-transform: uppercase; text-decoration: none; transition: all 0.2s; margin-left: 10px;
+}
+.nav-cta:hover { background: var(--or-dark); color: var(--blanc); }
+
+/* HERO PAGE */
+.page-hero {
+  min-height: 50vh; background: var(--noir);
+  display: flex; flex-direction: column; justify-content: center;
+  padding: 110px 24px 60px; position: relative; overflow: hidden;
+}
+.page-hero::before {
+  content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--or);
+}
+.page-hero-content { max-width: 900px; margin: 0 auto; position: relative; z-index: 1; }
+.page-label {
+  font-size: 10px; font-weight: 500; color: var(--or);
+  letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 20px;
+  display: flex; align-items: center; gap: 12px;
+}
+.page-label::before { content: ''; width: 28px; height: 1px; background: var(--or); }
+.page-hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(32px, 6vw, 58px); font-weight: 600;
+  color: var(--blanc); line-height: 1.1; margin-bottom: 20px;
+}
+.page-hero h1 em { font-style: italic; color: var(--or); }
+.page-hero-sub { font-size: 16px; color: var(--gris-l); font-weight: 300; line-height: 1.7; max-width: 680px; }
+
+/* CONTENU */
+.container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+section.content-section { padding: 70px 0; border-bottom: 1px solid var(--gris-xl); }
+section.content-section:last-of-type { border-bottom: none; }
+
+.section-label {
+  font-size: 9px; font-weight: 500; color: var(--or);
+  letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 12px;
+  display: flex; align-items: center; gap: 10px;
+}
+.section-label::before { content: ''; width: 20px; height: 1px; background: var(--or); }
+
+h2.section-h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(26px, 4vw, 38px); font-weight: 600;
+  color: var(--noir); line-height: 1.15; margin-bottom: 12px;
+}
+.section-sep { width: 40px; height: 1px; background: var(--or); margin-bottom: 30px; }
+
+.prose { font-size: 15px; line-height: 1.8; color: var(--noir); font-weight: 400; }
+.prose strong { font-weight: 500; color: var(--noir); }
+.prose p { margin-bottom: 16px; }
+.prose p:last-child { margin-bottom: 0; }
+
+/* GRILLE SERVICES */
+.services-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 2px; margin-top: 40px;
+}
+.service-card {
+  background: var(--creme); padding: 28px 24px;
+  border-left: 2px solid transparent; transition: all 0.3s;
+}
+.service-card:hover { border-left-color: var(--or); background: var(--blanc); }
+.service-card-icon { font-size: 24px; margin-bottom: 12px; display: block; }
+.service-card h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px; font-weight: 600; margin-bottom: 10px; color: var(--noir);
+}
+.service-card p { font-size: 13px; line-height: 1.65; color: var(--gris); font-weight: 400; }
+
+/* ZONES GRID */
+.zones-grid { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+.zone-tag {
+  padding: 8px 16px; background: var(--creme);
+  font-size: 13px; font-weight: 500; color: var(--noir);
+  border-bottom: 2px solid var(--or); transition: all 0.2s;
+}
+.zone-tag:hover { background: var(--noir); color: var(--or); }
+
+/* FAQ */
+.faq-list { display: flex; flex-direction: column; gap: 2px; margin-top: 30px; }
+.faq-item { background: var(--creme); overflow: hidden; }
+.faq-question {
+  padding: 18px 24px; font-size: 15px; font-weight: 500;
+  cursor: pointer; display: flex; justify-content: space-between;
+  align-items: center; transition: background 0.2s; user-select: none; color: var(--noir);
+}
+.faq-question:hover { background: var(--blanc); }
+.faq-question::after { content: '+'; font-size: 20px; color: var(--or); font-weight: 300; }
+.faq-question.open::after { content: '−'; }
+.faq-answer {
+  max-height: 0; overflow: hidden; transition: max-height 0.3s ease;
+  padding: 0 24px; font-size: 14px; line-height: 1.7;
+  color: var(--noir); font-weight: 400;
+}
+.faq-answer.open { max-height: 200px; padding: 0 24px 18px; }
+
+/* CTA BAS */
+.cta-section {
+  background: var(--noir); padding: 80px 24px; text-align: center;
+}
+.cta-section h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(28px, 5vw, 44px); font-weight: 600;
+  color: var(--blanc); margin-bottom: 16px;
+}
+.cta-section p { font-size: 15px; color: var(--gris-l); margin-bottom: 36px; font-weight: 300; }
+.cta-phone {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 36px; font-weight: 600; color: var(--or);
+  text-decoration: none; display: block; margin-bottom: 8px;
+}
+.cta-phone:hover { color: var(--blanc); }
+.cta-sub { font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gris-l); }
+.cta-btn {
+  display: inline-block; margin-top: 30px;
+  background: var(--or); color: var(--noir);
+  font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 500;
+  padding: 14px 32px; text-decoration: none;
+  letter-spacing: 0.08em; text-transform: uppercase; transition: all 0.2s;
+}
+.cta-btn:hover { background: var(--or-dark); color: var(--blanc); }
+
+footer {
+  background: #111; padding: 20px 24px;
+  display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: 10px;
+  border-top: 1px solid rgba(201,169,110,0.1);
+}
+.footer-left { font-family: 'Cormorant Garamond', serif; font-size: 13px; color: var(--gris-l); }
+.footer-left strong { color: var(--or); }
+
+@media (max-width: 600px) {
+  nav { padding: 0 12px; height: 60px; gap: 8px; }
+  .nav-logo { gap: 8px; min-width: 0; flex: 1; }
+  .nav-name { font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .nav-name em { display: none; }
+  .nav-back { display: none; }
+  .nav-cta { font-size: 11px; padding: 8px 12px; white-space: nowrap; flex-shrink: 0; }
+  .page-hero { padding: 90px 20px 50px; }
+  .container { padding: 0 16px; }
+  footer { flex-direction: column; text-align: center; }
+}
+@media (max-width: 380px) {
+  .nav-name { font-size: 11px; }
+  .nav-cta { padding: 7px 10px; font-size: 10px; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">
+    <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0">
+      <polygon points="22,2 40,11 40,33 22,42 4,33 4,11" fill="#1A1A1A"/>
+      <polygon points="22,2 40,11 40,33 22,42 4,33 4,11" fill="none" stroke="#C9A96E" stroke-width="1.4"/>
+      <polygon points="22,6 36,14 36,30 22,38 8,30 8,14" fill="none" stroke="#9E7A45" stroke-width="0.6"/>
+      <text x="22" y="26" text-anchor="middle" font-family="Georgia,serif" font-size="11" font-weight="600" fill="#C9A96E">MCT</text>
+    </svg>
+    <div class="nav-name">Votre apporteur d'affaires<em>pour les travaux · Perpignan</em></div>
+  </a>
+  <div style="display:flex;gap:0">
+    <a href="/" class="nav-back">← Accueil</a>
+    <a href="/#contact" class="nav-cta">Nous contacter</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="page-hero">
+  <div class="page-hero-content">
+    <div class="page-label">Nos services — Département 66</div>
+    <h1>Votre apporteur<br>d'affaires à <em>Perpignan</em></h1>
+    <p class="page-hero-sub">
+      Rénovation maison, peinture intérieure, carrelage, plomberie, électricité —
+      je trouve le bon artisan pour vos travaux à Perpignan et dans tout le département 66.
+      Service gratuit, artisans vérifiés, devis sous 48h.
+    </p>
+  </div>
+</div>
+
+<!-- SECTION 1 : POURQUOI UN COURTIER EN TRAVAUX À PERPIGNAN -->
+<div class="container">
+<section class="content-section">
+  <div class="section-label">Notre rôle</div>
+  <h2 class="section-h2">Pourquoi faire appel à un apporteur<br>d'affaires pour vos travaux à Perpignan ?</h2>
+  <div class="section-sep"></div>
+  <div class="prose">
+    <p>
+      Trouver un <strong>artisan fiable à Perpignan</strong> n'est pas toujours simple. Entre les délais d'intervention, la qualité des prestations et la difficulté à obtenir plusieurs devis comparables, les propriétaires perdent un temps précieux. C'est précisément là qu'intervient <strong>Mon Courtier Travaux</strong>.
+    </p>
+    <p>
+      En tant qu'<strong>apporteur d'affaires indépendant dans le 66</strong>, mon rôle est de faire le lien entre vous et les bons professionnels du bâtiment. Je me déplace chez vous pour évaluer votre projet, je sélectionne l'artisan le plus adapté parmi mon réseau de partenaires vérifiés, et je vous mets en relation rapidement.
+    </p>
+    <p>
+      Ce service est <strong>entièrement gratuit pour vous</strong> en tant que particulier. Ma rémunération est assurée par l'artisan partenaire sous forme de commission sur le devis signé. Vous bénéficiez d'un accompagnement professionnel sans aucun coût supplémentaire.
+    </p>
+  </div>
+</section>
+
+<!-- SECTION 2 : SERVICES DÉTAILLÉS -->
+<section class="content-section">
+  <div class="section-label">Corps de métier</div>
+  <h2 class="section-h2">Tous vos travaux pris en charge<br>dans le département 66</h2>
+  <div class="section-sep"></div>
+  <div class="prose">
+    <p>
+      Que vous ayez besoin d'un <strong>peintre à Perpignan</strong>, d'un carreleur, d'un plombier ou d'une entreprise pour une <strong>rénovation complète de maison dans les Pyrénées-Orientales</strong>, je gère la mise en relation pour l'ensemble des corps de métier du bâtiment.
+    </p>
+  </div>
+  <div class="services-grid">
+    <div class="service-card">
+      <span class="service-card-icon">🎨</span>
+      <h3>Peinture intérieure & extérieure</h3>
+      <p>Peintre qualifié à Perpignan pour vos travaux de peinture intérieure, ravalement de façade, enduits décoratifs. Devis gratuit sous 48h.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-card-icon">🟫</span>
+      <h3>Carrelage & revêtements</h3>
+      <p>Pose de carrelage, faïence, mosaïque. Carreleur professionnel dans le 66 pour vos salles de bain, cuisines et espaces extérieurs.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-card-icon">🔧</span>
+      <h3>Plomberie & sanitaires</h3>
+      <p>Installation, rénovation ou dépannage plomberie à Perpignan. Artisans certifiés pour vos projets de plomberie résidentielle.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-card-icon">⚡</span>
+      <h3>Électricité</h3>
+      <p>Mise aux normes, installation tableau électrique, domotique. Électriciens qualifiés RGE dans les Pyrénées-Orientales.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-card-icon">🚪</span>
+      <h3>Menuiserie & fenêtres</h3>
+      <p>Pose de fenêtres, portes, volets, parquet. Menuisiers expérimentés pour vos projets d'aménagement intérieur et extérieur à Perpignan.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-card-icon">🧣</span>
+      <h3>Isolation thermique</h3>
+      <p>Isolation des combles, murs, planchers. Artisans RGE pour bénéficier des aides à la rénovation énergétique dans le 66.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-card-icon">🗂️</span>
+      <h3>Placo & cloisons</h3>
+      <p>Création ou suppression de cloisons, doublage, faux plafonds. Plaquistes professionnels pour vos travaux d'aménagement intérieur.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-card-icon">🪵</span>
+      <h3>Parquet & revêtements de sol</h3>
+      <p>Pose de parquet massif, stratifié, vinyle. Artisans spécialisés en revêtements de sol dans les Pyrénées-Orientales.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-card-icon">🏠</span>
+      <h3>Toiture & couverture</h3>
+      <p>Réfection de toiture, tuiles, zinguerie, étanchéité. Couvreurs qualifiés à Perpignan et dans le département 66.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-card-icon">🔨</span>
+      <h3>Rénovation complète</h3>
+      <p>Pilotage de <strong>rénovation maison à Perpignan</strong> tous corps de métier. Je coordonne l'ensemble des artisans pour votre projet clé en main.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 3 : ZONE D'INTERVENTION -->
+<section class="content-section">
+  <div class="section-label">Zone d'intervention</div>
+  <h2 class="section-h2">Votre apporteur d'affaires<br>dans tout le département 66</h2>
+  <div class="section-sep"></div>
+  <div class="prose">
+    <p>
+      J'interviens sur <strong>Perpignan et l'ensemble des Pyrénées-Orientales</strong> pour mettre en relation propriétaires occupants et bailleurs avec des artisans de confiance. Que vous soyez sur la côte, en plaine ou dans l'arrière-pays catalan, je me déplace pour évaluer votre projet de travaux.
+    </p>
+    <p>
+      Les visites chantier sont réalisées <strong>en soirée à partir de 18h</strong>, sur rendez-vous, pour s'adapter à votre emploi du temps. Je suis disponible par téléphone en journée pour un premier échange.
+    </p>
+  </div>
+  <div class="zones-grid">
+    <span class="zone-tag">Perpignan</span>
+    <span class="zone-tag">Cabestany</span>
+    <span class="zone-tag">Saint-Estève</span>
+    <span class="zone-tag">Canet-en-Roussillon</span>
+    <span class="zone-tag">Rivesaltes</span>
+    <span class="zone-tag">Le Barcarès</span>
+    <span class="zone-tag">Thuir</span>
+    <span class="zone-tag">Prades</span>
+    <span class="zone-tag">Argelès-sur-Mer</span>
+    <span class="zone-tag">Elne</span>
+    <span class="zone-tag">Saint-Laurent-de-la-Salanque</span>
+    <span class="zone-tag">Département 66</span>
+  </div>
+</section>
+
+<!-- SECTION 4 : FAQ -->
+<section class="content-section">
+  <div class="section-label">Questions fréquentes</div>
+  <h2 class="section-h2">Tout savoir sur nos services<br>de travaux à Perpignan</h2>
+  <div class="section-sep"></div>
+  <div class="faq-list">
+    <div class="faq-item">
+      <div class="faq-question">Combien coûte ce service ?</div>
+      <div class="faq-answer">Mon service est entièrement gratuit pour vous. Je suis rémunéré par l'artisan partenaire sous forme d'une commission sur le montant du devis signé. Vous ne payez rien de plus que le prix des travaux.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Comment obtenir un devis travaux à Perpignan ?</div>
+      <div class="faq-answer">Appelez-moi au 06 60 37 37 22 ou remplissez le formulaire de contact. Je me déplace chez vous pour évaluer votre projet, puis je transmets une fiche complète à l'artisan. Vous recevez un devis sous 48h.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Comment sont sélectionnés vos artisans partenaires ?</div>
+      <div class="faq-answer">Je travaille uniquement avec des artisans assurés, disposant d'un SIRET actif et recommandés pour la qualité de leur travail. Chaque artisan partenaire est évalué sur ses références et son sérieux avant toute mise en relation.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Intervenez-vous pour les propriétaires bailleurs ?</div>
+      <div class="faq-answer">Oui, je travaille aussi bien pour les propriétaires occupants que pour les propriétaires bailleurs souhaitant remettre un bien en état avant location ou revente dans le 66.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Quelle est votre zone d'intervention dans les Pyrénées-Orientales ?</div>
+      <div class="faq-answer">J'interviens sur Perpignan et l'ensemble du département 66 — côte, plaine et arrière-pays. Je me déplace en soirée à partir de 18h pour les visites chantier.</div>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- CTA FINAL -->
+<div class="cta-section">
+  <div class="container">
+    <h2>Un projet de travaux<br>à Perpignan ?</h2>
+    <p>Premier contact gratuit et sans engagement.<br>Je trouve le bon artisan pour vous dans les 48h.</p>
+    <a href="tel:0660373722" class="cta-phone">06 60 37 37 22</a>
+    <div class="cta-sub">Appel gratuit · Devis sans engagement · Service 100% gratuit</div>
+    <a href="/#contact" class="cta-btn">Envoyer une demande</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-left"><strong>moncourtiertravaux66.fr</strong> · Joan Marchand · Perpignan (66)</div>
+  <div style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.2)">Apporteur d'affaires & Courtier en travaux</div>
+</footer>
+
+<script>
+document.querySelectorAll('.faq-question').forEach(function(q) {
+  q.addEventListener('click', function() {
+    var answer = this.nextElementSibling;
+    var isOpen = this.classList.contains('open');
+    document.querySelectorAll('.faq-question').forEach(function(x) {
+      x.classList.remove('open');
+      x.nextElementSibling.classList.remove('open');
+    });
+    if (!isOpen) {
+      this.classList.add('open');
+      answer.classList.add('open');
+    }
+  });
+});
+</script>
+</body>
+</html>
