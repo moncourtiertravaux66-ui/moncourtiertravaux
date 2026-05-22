@@ -54,15 +54,9 @@ html { scroll-behavior: smooth; }
 body { font-family: 'DM Sans', sans-serif; background: var(--blanc); color: var(--noir); }
 
 /* NAV */
-nav {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-  background: rgba(26,26,26,0.96); backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(201,169,110,0.15);
-  padding: 0 24px; display: flex; align-items: center;
-  justify-content: space-between; height: 76px;
-}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(26,26,26,0.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,169,110,0.15);padding:0 28px;display:flex;align-items:center;justify-content:space-between;height:90px}
 .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-.nav-hex { display:flex; align-items:center; justify-content:center; }
+
 .nav-name { font-family: 'Cormorant Garamond', serif; font-size: 16px; font-weight: 600; color: var(--blanc); }
 .nav-name em { display: block; font-style: italic; font-size: 10px; color: var(--or); letter-spacing: 0.1em; text-transform: uppercase; }
 .nav-back {
@@ -208,7 +202,7 @@ footer {
 .footer-left strong { color: var(--or); }
 
 @media (max-width: 600px) {
-  nav { padding: 0 12px; height: 60px; gap: 8px; }
+  nav { padding: 0 12px; height: 70px; gap: 8px; }
   .nav-logo { gap: 8px; min-width: 0; flex: 1; }
   .nav-name { font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .nav-name em { display: none; }
@@ -227,15 +221,17 @@ footer {
 <body>
 
 <nav>
-  <a href="/" class="nav-logo">
-    <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0">
-      <polygon points="22,2 40,11 40,33 22,42 4,33 4,11" fill="#1A1A1A"/>
-      <polygon points="22,2 40,11 40,33 22,42 4,33 4,11" fill="none" stroke="#C9A96E" stroke-width="1.4"/>
-      <polygon points="22,6 36,14 36,30 22,38 8,30 8,14" fill="none" stroke="#9E7A45" stroke-width="0.6"/>
-      <text x="22" y="26" text-anchor="middle" font-family="Georgia,serif" font-size="11" font-weight="600" fill="#C9A96E">MCT</text>
-    </svg>
-    <div class="nav-name">Votre apporteur d'affaires<em>pour les travaux · Perpignan</em></div>
-  </a>
+  <div class="nav-logo">
+    <a href="/" style="display:flex;align-items:center;gap:12px;text-decoration:none">
+      <svg width="52" height="52" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0">
+        <polygon points="22,2 40,11 40,33 22,42 4,33 4,11" fill="#1A1A1A"/>
+        <polygon points="22,2 40,11 40,33 22,42 4,33 4,11" fill="none" stroke="#C9A96E" stroke-width="1.4"/>
+        <polygon points="22,6 36,14 36,30 22,38 8,30 8,14" fill="none" stroke="#9E7A45" stroke-width="0.6"/>
+        <text x="22" y="26" text-anchor="middle" font-family="Georgia,serif" font-size="11" font-weight="600" fill="#C9A96E">MCT</text>
+      </svg>
+      <div class="nav-name">Votre apporteur d'affaires<em>pour les travaux · Perpignan</em></div>
+    </a>
+  </div>
   <div style="display:flex;gap:0">
     <a href="/" class="nav-back">← Accueil</a>
     <a href="/#contact" class="nav-cta">Nous contacter</a>
