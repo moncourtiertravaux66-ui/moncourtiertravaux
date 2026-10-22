@@ -3,17 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="description" content="Petits travaux à Perpignan et dans le 66. Artisan disponible rapidement, devis gratuit. Réparations, retouches peinture, pose rapide.">
+<meta name="description" content="Petits travaux à Perpignan et dans le 66 : plomberie courante, électricité, menuiserie, montage. Artisan disponible sous 48h, devis gratuit.">
 <title>Petits Travaux Perpignan | Artisan 66 | Mon Courtier Travaux</title>
 <link rel="canonical" href="https://moncourtiertravaux66.fr/petits-travaux/">
 <meta name="robots" content="index, follow">
 <link rel="icon" type="image/png" href="/favicon.png">
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <meta property="og:title" content="Petits Travaux Perpignan | Artisan 66 | Mon Courtier Travaux">
-<meta property="og:description" content="Petits travaux à Perpignan et dans le 66. Artisan disponible rapidement, devis gratuit. Réparations, retouches peinture, pose rapide.">
+<meta property="og:description" content="Petits travaux à Perpignan et dans le 66 : plomberie courante, électricité, menuiserie, montage. Artisan disponible sous 48h, devis gratuit.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://moncourtiertravaux66.fr/petits-travaux/">
 <meta property="og:locale" content="fr_FR">
@@ -29,7 +28,7 @@
     "url":"https://moncourtiertravaux66.fr"
   },
   "areaServed":{"@type":"City","name":"Perpignan"},
-  "description":"Mise en relation avec des artisans pour petits travaux à Perpignan et dans le département 66."
+  "description":"Petits travaux à Perpignan et dans le 66 : plomberie courante, électricité, menuiserie, montage. Artisan disponible sous 48h, devis gratuit."
 }
 </script>
 <style>
@@ -47,7 +46,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 40px;height:72px;d
 .service-label{font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:var(--or);margin-bottom:20px}
 h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(48px,8vw,96px);line-height:1;letter-spacing:.02em;margin-bottom:32px}
 h1 em{color:var(--or);font-style:normal}
-.service-intro{font-size:17px;color:rgba(255,255,255,.7);line-height:1.8;max-width:680px;margin-bottom:64px}
+.service-intro{font-size:17px;color:rgba(255,255,255,.7);line-height:1.8;max-width:680px;margin-bottom:48px}
+.btn-primary{background:var(--or);color:var(--bg);font-family:'DM Sans',sans-serif;font-size:11px;font-weight:600;padding:18px 40px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;display:inline-flex;align-items:center;gap:10px;border:none;cursor:pointer}
+.btn-primary:hover{background:var(--or2)}
 .section{padding:80px;background:var(--bg2);margin-bottom:2px}
 .section-inner{max-width:900px;margin:0 auto}
 h2{font-family:'Bebas Neue',sans-serif;font-size:36px;letter-spacing:.04em;margin-bottom:24px;color:var(--blanc)}
@@ -57,11 +58,22 @@ h2{font-family:'Bebas Neue',sans-serif;font-size:36px;letter-spacing:.04em;margi
 .avantage-icon{font-size:24px;margin-bottom:12px}
 .avantage-title{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:.04em;color:var(--or);margin-bottom:8px}
 .avantage-text{font-size:13px;color:var(--gris);line-height:1.7}
-.cta-section{padding:80px;text-align:center}
-.cta-section h2{font-family:'Bebas Neue',sans-serif;font-size:48px;letter-spacing:.04em;margin-bottom:16px}
-.cta-section p{color:var(--gris);margin-bottom:40px;font-size:15px}
-.btn-primary{background:var(--or);color:var(--bg);font-family:'DM Sans',sans-serif;font-size:11px;font-weight:600;padding:18px 40px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;display:inline-flex;align-items:center;gap:10px}
-.btn-primary:hover{background:var(--or2)}
+
+.form-service{background:var(--bg2);padding:80px;margin-bottom:2px}
+.form-service .section-inner{max-width:700px}
+.form-service h2{font-family:'Bebas Neue',sans-serif;font-size:36px;letter-spacing:.04em;margin-bottom:8px;color:var(--blanc)}
+.form-service p.form-desc{color:var(--gris);margin-bottom:32px;font-size:14px}
+.fg{margin-bottom:16px}
+.fg input,.fg textarea,.fg select{width:100%;background:#fff;border:1.5px solid #222;color:#111;font-family:'DM Sans',sans-serif;font-size:13px;padding:14px 16px;outline:none;transition:border-color .2s;-webkit-appearance:none}
+.fg input:focus,.fg textarea:focus,.fg select:focus{border-color:var(--or)}
+.fg input::placeholder,.fg textarea::placeholder{color:#999}
+.fg textarea{height:100px;resize:none}
+.fg select option{background:#fff;color:#111}
+#fs-submit{background:var(--or);color:var(--bg);border:none;font-family:'DM Sans',sans-serif;font-size:11px;font-weight:600;padding:16px 40px;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;width:100%;margin-top:8px}
+#fs-submit:hover{background:var(--or2);color:#fff}
+#fs-msg{font-size:13px;margin-top:10px;min-height:18px;color:var(--or)}
+@media(max-width:768px){.form-service{padding:60px 20px}}
+
 footer{background:var(--bg);border-top:1px solid rgba(201,169,110,0.1);padding:32px 80px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
 .footer-logo{font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:.06em;color:var(--blanc)}
 .footer-links{display:flex;gap:24px;flex-wrap:wrap}
@@ -71,7 +83,7 @@ footer{background:var(--bg);border-top:1px solid rgba(201,169,110,0.1);padding:3
 @media(max-width:768px){
   .hero-service{padding:120px 20px 60px}
   .section{padding:60px 20px}
-  footer{padding:32px 20px}
+  footer{padding:32px 20px;flex-direction:column;align-items:flex-start}
 }
 </style>
 </head>
@@ -83,16 +95,16 @@ footer{background:var(--bg);border-top:1px solid rgba(201,169,110,0.1);padding:3
 
 <div class="hero-service">
   <div class="breadcrumb"><a href="/">Accueil</a> › Petits Travaux</div>
-  <div class="service-label">— Service · Perpignan & Département 66</div>
-  <h1>Petits Travaux à <em>Perpignan.</em><br>Artisan Rapide.</h1>
-  <p class="service-intro">Un petit chantier, une réparation, une retouche peinture ou une pose rapide à Perpignan ou dans le 66 ? Je trouve l'artisan disponible rapidement et vous obtiens un devis gratuit. Même les petits projets méritent un professionnel qualifié.</p>
-  <a href="/#contact" class="btn-primary">→ Demander un devis gratuit</a>
+  <div class="service-label">— Service · Petits Travaux · Perpignan & Département 66</div>
+  <h1>Petits Travaux à <em>Perpignan.</em><br>Devis Gratuit.</h1>
+  <p class="service-intro">Un robinet qui fuit, une porte qui bloque, une prise à installer ? Pour tous vos petits travaux à Perpignan et dans le 66, je vous trouve un artisan disponible rapidement — devis gratuit, intervention sous 48h.</p>
+  <a href="#contact" class="btn-primary">→ Demander un devis gratuit</a>
 </div>
 
 <section class="section">
   <div class="section-inner">
     <h2>Comment ça marche</h2>
-    <p class="content-text">Décrivez votre besoin en quelques mots : type de travaux, urgence, localisation dans le 66. Je contacte les artisans disponibles de mon réseau et vous mets en relation rapidement. Retouche peinture, petite réparation, pose d'équipement, petite maçonnerie — tous petits chantiers acceptés sans minimum de chiffre d'affaires.</p>
+    <p class="content-text">Plomberie courante, électricité de base, menuiserie, fixations, montage de meubles — je prends en charge tous les petits chantiers que vous n'avez pas le temps ou l'envie de faire vous-même. Décrivez-moi ce que vous avez besoin, je vous mets en relation avec l'artisan disponible le plus proche dans le 66.</p>
     <div class="avantages">
       <div class="avantage">
         <div class="avantage-icon">✓</div>
@@ -116,25 +128,46 @@ footer{background:var(--bg);border-top:1px solid rgba(201,169,110,0.1);padding:3
 <section class="section">
   <div class="section-inner">
     <h2>Zone d'intervention</h2>
-    <p class="content-text">J'interviens sur tout le département des Pyrénées-Orientales (66) : Perpignan, Canet-en-Roussillon, Saint-Estève, Rivesaltes, Thuir, Argelès-sur-Mer et les communes alentour. Petits travaux à Perpignan et dans tout le département des Pyrénées-Orientales.</p>
+    <p class="content-text">J'interviens sur tout le département des Pyrénées-Orientales (66) : Perpignan, Canet-en-Roussillon, Saint-Estève, Rivesaltes, Thuir, Argelès-sur-Mer, Le Barcarès, Prades et les communes alentour.</p>
   </div>
 </section>
 
-<div class="cta-section">
-  <h2>Votre devis <em style="color:var(--or)">gratuit</em></h2>
-  <p>Décrivez votre projet, je vous mets en relation avec le bon artisan sous 24h.</p>
-  <a href="/#contact" class="btn-primary">→ Demander un devis</a>
-</div>
+<section class="form-service" id="contact">
+  <div class="section-inner">
+    <h2>Demandez votre devis <em style="color:var(--or)">gratuit</em></h2>
+    <p class="form-desc">Décrivez votre projet, je vous recontacte sous 24h.</p>
+    <form id="fs-form">
+      <div class="fg"><input type="text" name="nom" placeholder="Votre nom" required></div>
+      <div class="fg"><input type="tel" name="telephone" placeholder="Votre téléphone" required></div>
+      <div class="fg"><input type="email" name="email" placeholder="Votre email (optionnel)"></div>
+      <div class="fg"><textarea name="projet" placeholder="Décrivez votre projet : type de travaux, surface, ville..." required></textarea></div>
+      <button type="submit" id="fs-submit">→ Envoyer ma demande</button>
+      <div id="fs-msg"></div>
+    </form>
+  </div>
+</section>
+<script>
+document.getElementById('fs-form').addEventListener('submit',async function(e){
+  e.preventDefault();
+  var btn=document.getElementById('fs-submit');
+  var msg=document.getElementById('fs-msg');
+  btn.textContent='Envoi en cours...';btn.disabled=true;
+  var fd=new FormData(this);
+  var payload={'access_key':'f4340735-8a69-4db3-908d-a1ad12a54d3e','subject':'Nouveau devis MCT - Petits Travaux Perpignan - moncourtiertravaux66.fr'};
+  fd.forEach(function(v,k){payload[k]=v});
+  try{
+    var res=await fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(payload)});
+    var data=await res.json();
+    if(data.success){msg.style.color='var(--or)';msg.textContent='✓ Demande envoyée ! Je vous recontacte sous 24h.';this.reset();}
+    else{msg.style.color='#e55';msg.textContent='Erreur. Appelez le 06 60 37 37 22.';}
+  }catch(err){msg.style.color='#e55';msg.textContent='Erreur réseau. Appelez le 06 60 37 37 22.';}
+  btn.textContent='→ Envoyer ma demande';btn.disabled=false;
+});
+</script>
 
 <footer>
   <span class="footer-logo">Mon Courtier Travaux</span>
-  <div class="footer-links">
-    <a href="/peinture/">Peinture</a>
-    <a href="/carrelage/">Carrelage</a>
-    <a href="/renovation/">Rénovation</a>
-    <a href="/mentions-legales/">Mentions légales</a>
-    <a href="/politique-de-confidentialite/">Confidentialité</a>
-  </div>
+  <div class="footer-links"><a href="/peinture/">Peinture</a><a href="/carrelage/">Carrelage</a><a href="/renovation/">Rénovation</a><a href="/petits-travaux/">Petits Travaux</a><a href="/mentions-legales/">Mentions légales</a><a href="/politique-de-confidentialite/">Confidentialité</a></div>
   <span class="footer-copy">&copy; 2026 moncourtiertravaux66.fr</span>
 </footer>
 </body>
